@@ -1,0 +1,99 @@
+CREATE TABLE UserSkills (
+    Id INT PRIMARY KEY,
+    Skill VARCHAR(100),
+    UserId INT
+);
+----------------------------------
+
+CREATE TABLE UserDetail (
+    Id INT PRIMARY KEY,
+    UserId INT,
+    Name VARCHAR(100),
+    Surname VARCHAR(100),
+    EmployeeId VARCHAR(50),
+    Manager VARCHAR(100),
+    Title VARCHAR(100),
+    Department VARCHAR(100),
+    MyProfile TEXT,
+    WhyIVolunteer TEXT,
+    CountryId INT,
+    CityId INT,
+    Avilability VARCHAR(100),
+    LinkdInUrl VARCHAR(255),
+    MySkills TEXT,
+    UserImage TEXT,
+    Status BOOLEAN
+);
+----------------------------------
+
+
+CREATE TABLE "User" (
+    Id INT PRIMARY KEY,
+    FirstName VARCHAR(100),
+    LastName VARCHAR(100),
+    PhoneNumber VARCHAR(20),
+    EmailAddress VARCHAR(255),
+    UserType VARCHAR(50),
+    Password VARCHAR(255)
+);
+----------------------------------
+
+CREATE TABLE MissionTheme (
+    Id INT PRIMARY KEY,
+    ThemeName VARCHAR(100),
+    Status VARCHAR(100)
+);
+----------------------------------
+
+CREATE TABLE MissionSkill (
+    Id INT PRIMARY KEY,
+    SkillName VARCHAR(100),
+    Status VARCHAR(100)
+);
+----------------------------------
+
+
+CREATE TABLE Missions (
+    Id INT PRIMARY KEY,
+    MissionTitle VARCHAR(100),
+    MissionDescription TEXT,
+    MissionOrganisationName VARCHAR(100),
+    MissionOrganisationDetail TEXT,
+    CountryId INT,
+    CityId INT,
+    StartDate DATE,
+    EndDate DATE,
+    MissionType VARCHAR(100),
+    TotalSheets INT,
+    RegistrationDeadLine DATE,
+    MissionThemeId VARCHAR(100),
+    MissionSkillId VARCHAR(100),
+    MissionImages TEXT,
+    MissionDocuments TEXT,
+    MissionAvilability VARCHAR(100),
+    MissionVideoUrl TEXT
+);
+----------------------------------
+
+CREATE TABLE MissionApplication (
+    Id INT PRIMARY KEY,
+    MissionId INT,
+    UserId INT,
+    AppliedDate TIMESTAMP,
+    Status BOOLEAN,
+    Sheet INT
+);
+----------------------------------
+
+CREATE TABLE City (
+    Id INT PRIMARY KEY,
+    CountryId INT,
+    CityName VARCHAR(100)
+);
+----------------------------------
+
+
+CREATE TABLE Country (
+    Id INT PRIMARY KEY,
+    CountryName VARCHAR(100)
+);
