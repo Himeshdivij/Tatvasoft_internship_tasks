@@ -1,0 +1,21 @@
+<h1>Hello I'm Divij!!!</h1>
+
+<!-- Structural directive -->
+ <br>
+ <p><b>Basic Implementation of Structural Directive:</b></p>
+<p *ngIf="CPI >=7">You got First Class With Distinction </p>
+<p *ngIf="CPI <7">You Failed to recieve First Class With Distinction </p>
+<br>
+<!-- Attribute directive -->
+<p><b>Implementation of Attribte Directive:</b></p>
+<button (click)="buttonClicked()">Click Here</button>
+<!-- Oneway databinding (interpolation) -->
+ <p><b>DataBinding</b></p>
+ <p><b>OneWay Databinding (interpolation)</b></p>
+<p>My Name is {{ name }}</p>
+
+<p><b>OneWay Databinding (propertybinding)</b></p>
+<input [type]="inputType">
+<p>in the above textbox if i write number then only it consider as a valid data.</p>
+
+<router-outlet />
